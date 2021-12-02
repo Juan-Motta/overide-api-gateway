@@ -1,7 +1,7 @@
 # OVERIDE - API Gateway
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78517969/144327998-257dcc25-cd9d-46dd-bbc2-fc62943d772c.png" alt="DB_Model" />
+  <img src="https://user-images.githubusercontent.com/78517969/144489907-f93ab9ad-8106-4b5c-9f18-919222142726.png" alt="DB_Model" />
   
 </p>
 
