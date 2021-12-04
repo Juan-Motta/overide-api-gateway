@@ -1,8 +1,10 @@
 import 'reflect-metadata';
+import dotenv from 'dotenv'
 
 import { runServer } from './app';
 
 async function main() {
+    dotenv.config();
     //start server
     const app = await runServer();
     //set port

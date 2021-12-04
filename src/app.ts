@@ -2,7 +2,8 @@ import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
 
-import { UserResolver } from './resolvers/user';
+import { UserResolver } from './resolvers/UserResolver';
+import { LoginResolver } from './resolvers/LoginResolver';
 
 export async function runServer() {
     // create express server
@@ -10,8 +11,11 @@ export async function runServer() {
     // create graphql API
     const server = new ApolloServer({
         schema: await buildSchema({
-            resolvers: [UserResolver]
-        })
+            resolvers: [UserResolver, LoginResolver]
+        }),
+        introspection: true,
+        playground: true,
+        context: ({ req }) => ({ req })
     });
     // set apollo to work on express
     server.applyMiddleware({ app, path: '/graphql' });
