@@ -2,6 +2,9 @@ import axios from 'axios';
 import { AuthenticationError } from 'apollo-server-express'
 import { UserInput, UserUpdateInput } from '../schemas/User';
 
+import jwt_decode from "jwt-decode";
+import { TokenJwtPayload } from '../interfaces/Jwt';
+
 const BASE_URL: string = 'https://overide-user-microservice.herokuapp.com';
 
 export async function getTokens(username: string, password: string) {
@@ -35,6 +38,12 @@ export async function getUserById(id: number, token: string) {
     } catch (error) {
         throw new AuthenticationError('No tiene los permisos necesarios');
     }
+}
+
+export async function hasUserPermission(token: string) {
+    const { user_id } = jwt_decode<TokenJwtPayload>(token);
+    const { is_staff } = await getUserById(user_id, token);
+    return is_staff;
 }
 
 export async function createUser(user: UserInput) {

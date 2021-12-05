@@ -72,5 +72,10 @@ http://localhost:3000/graphql
 #### 0.2.0
 
 * Actualizada conexion con la API Rest Usuarios
-* Creados Queries y Mutations que  permiten interactuar con la API Rest
+* Creados Queries y Mutations que  permiten interactuar con la API Usuarios
+
+#### 0.3.0
+
+* Actualizada conexion con la API Rest Trayectos
+* Creados Queries y Mutations que permiten interactuar con la API Ciudades
 
