@@ -83,3 +83,8 @@ http://localhost:3000/graphql
 
 * Actualizada conexion con la API Rest Trayectos
 * Creados Queries y Mutations que permiten interacturar con la API Trayectos
+
+#### 0.5.0
+
+* Actualizada conexion con la API Rest Reservas
+* Creados Queries y Mutations que permiten interactuar con la API Reservas
