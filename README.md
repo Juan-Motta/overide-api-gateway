@@ -88,3 +88,7 @@ http://localhost:3000/graphql
 
 * Actualizada conexion con la API Rest Reservas
 * Creados Queries y Mutations que permiten interactuar con la API Reservas
+
+#### 1.0.0
+
+* Creada version de produccion
