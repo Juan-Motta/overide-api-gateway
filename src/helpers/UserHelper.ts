@@ -16,6 +16,14 @@ export async function getTokens(username: string, password: string) {
     return data;
 }
 
+export async function getRefreshToken(refresh: string) {
+    const body = {
+        refresh
+    }
+    const { data } = await axios.post(`${BASE_URL}/api/login/refresh/`, body);
+    return data;
+}
+
 export async function allUsers(token: string) {
     const config = {
         headers: { Authorization: `Bearer ${token}` }

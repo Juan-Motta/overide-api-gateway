@@ -1,7 +1,7 @@
 import { Arg, Query, Resolver } from 'type-graphql';
 
-import { getTokens } from '../helpers/UserHelper';
-import { Token } from '../schemas/Login'
+import { getTokens, getRefreshToken } from '../helpers/UserHelper';
+import { Token, AccessToken } from '../schemas/Login'
 
 @Resolver()
 export class LoginResolver {
@@ -11,5 +11,12 @@ export class LoginResolver {
         @Arg('password') password: string
     ) {
         return getTokens(username, password);
+    }
+
+    @Query(() => AccessToken)
+    refresh(
+        @Arg('refresh') refresh: string
+    ) {
+        return getRefreshToken(refresh);
     }
 }

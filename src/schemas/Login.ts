@@ -8,3 +8,9 @@ export class Token {
     @Field(() => String)
     refresh!: string;
 }
+
+@ObjectType()
+export class AccessToken {
+    @Field(() => String)
+    access!: string;
+}

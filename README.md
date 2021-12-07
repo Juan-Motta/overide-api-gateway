@@ -92,3 +92,7 @@ http://localhost:3000/graphql
 #### 1.0.0
 
 * Creada version de produccion
+
+#### 1.1.0
+
+* Creada query para refrescar token de acceso
