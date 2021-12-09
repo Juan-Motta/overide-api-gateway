@@ -83,7 +83,7 @@ export async function getOccupiedSeatsByRideId(id: number) {
 export async function createBooking(input: BookingInput) {
     try {
         const { data } = await axios.post(`${BASE_URL}/api/bookings/create`, input);
-        return 'Reserva creada correctamente';
+        return data.booking;
     } catch (error) {
         throw new ApolloError('Error en el servidor');
     }

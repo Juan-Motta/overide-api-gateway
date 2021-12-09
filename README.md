@@ -96,3 +96,7 @@ http://localhost:3000/graphql
 #### 1.1.0
 
 * Creada query para refrescar token de acceso
+
+#### 1.1.1
+
+* Actualizada query createBooking, ahora al realizar la peticion de crear un usuario correctamente, se devolvera la informacion del mismo creado junto con sus ids correspondientes.

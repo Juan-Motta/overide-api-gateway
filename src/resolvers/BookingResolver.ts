@@ -44,7 +44,7 @@ export class BookingResolver {
         return getOccupiedSeatsByRideId(id);
     }
 
-    @Mutation(() => String)
+    @Mutation(() => Booking)
     createBooking(
         @Arg('input') input: BookingInput
     ) {
